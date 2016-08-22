@@ -10,7 +10,7 @@ joblib.dump(clf,'n_classify.model')
 joblib.dump(cate_dict,'n_cate_dict.dat')
 joblib.dump(vectorizer,'n_vectorizer.dat')
 
-cate_id_name_dict = dict(map(lambda (k,v):(v,k),cate_dict.items()))
+cate_id_name_dict = dict([(v, k) for k, v in cate_dict.items()])
 
 pred = clf.predict(vectorizer.transform(['[신한카드5%할인][서우한복] 아동한복 여자아동 금나래 (분홍)']))[0]
 print(cate_id_name_dict[pred])

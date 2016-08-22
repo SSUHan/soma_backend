@@ -28,7 +28,6 @@ def index():
 
 @route('/classify')
 def classify():
-    print("classify called")
     img = request.GET.get('img','')
     name = request.GET.get('name', '')
     pred = clf.predict(vectorizer.transform([name]))[0]

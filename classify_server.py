@@ -35,4 +35,4 @@ def classify():
     return {'cate':cate_id_name_dict[pred]}
 
 
-run(host='0.0.0.0', port=8887)
+run(host='0.0.0.0', port=18887)

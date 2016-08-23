@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify, abort
 from sklearn.externals import joblib
-from preprocess import clean_title, pp_kkma, pp_twitter
 import logging
 
 

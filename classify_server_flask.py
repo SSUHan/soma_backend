@@ -24,12 +24,13 @@ def index():
 
 @app.route('/classify')
 def classify():
-        print("#")
+        print("\n")
         img_url = request.args.get('img', '')
         name = request.args.get('name', '')
-        print('> Name: %s' % name)
+        print('<- Name: %s' % name)
 
         pred = clf.predict(vectorizer.transform([name]))[0]
+        print('-> Cate : %s' % cate_id_name_dict[pred])
         return jsonify({'cate': cate_id_name_dict[pred]})
 
 

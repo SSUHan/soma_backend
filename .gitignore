@@ -3,6 +3,5 @@
 venvServer/*
 
 *.df
-*.ipynb
 
 .env
